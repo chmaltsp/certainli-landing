@@ -1,0 +1,19 @@
+.bottom-border-input {
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-bottom: 2px solid #FFF;
+  font-size: 1.6em;
+  width: 10em;
+  background: transparent;
+  outline: none;
+  color: #FFF;
+  height: 1.6em;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: .1em;
+  &.dark {
+    color: #333;
+    border-bottom: 2px solid #333;
+  }
+}

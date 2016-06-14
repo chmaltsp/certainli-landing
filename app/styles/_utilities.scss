@@ -1,0 +1,93 @@
+@mixin util-x-list {
+  @for $i from 0 through 3 {
+    .m-t-#{$i} {
+      margin-top: #{$i}rem;
+    }
+    .m-b-#{$i} {
+      margin-bottom: #{$i}rem;
+    }
+    .m-l-#{$i} {
+      margin-left: #{$i}rem;
+    }
+    .m-r-#{$i} {
+      margin-right: #{$i}rem;
+    }
+    .m-y-#{$i} {
+      margin-top: #{$i}rem;
+      margin-bottom: #{$i}rem;
+    }
+    .m-x-#{$i} {
+      margin-left: #{$i}rem;
+      margin-right: #{$i}rem;
+    }
+    .m-a-#{$i} {
+      margin: #{$i}rem;
+    }
+    .p-t-#{$i} {
+      padding-top: #{$i}rem;
+    }
+    .p-b-#{$i} {
+      padding-bottom: #{$i}rem;
+    }
+    .p-l-#{$i} {
+      padding-left: #{$i}rem;
+    }
+    .p-r-#{$i} {
+      padding-right: #{$i}rem;
+    }
+    .p-y-#{$i} {
+      padding-top: #{$i}rem;
+      padding-bottom: #{$i}rem;
+    }
+    .p-x-#{$i} {
+      padding-left: #{$i}rem;
+      padding-right: #{$i}rem;
+    }
+    .p-a-#{$i} {
+      padding: #{$i}rem;
+    }
+  }
+}
+
+@include util-x-list;
+
+.text-center {
+  text-align: center;
+}
+
+.center {
+  lost-align:center flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.self-center {
+  align-self: center;
+}
+.font-weight-light {
+  font-weight: 200;
+}
+
+.row {
+  @media(max-width: 700px) {
+    margin-top: 2rem;
+  }
+}
+.v-center {
+  vertical-align: middle;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+.g-o {
+  lost-utility: edit;
+}
+.text-dark {
+  color: #999;
+}
+.hide-md-down {
+  @media(max-width: 700px) {
+    display: none;
+  }
+}

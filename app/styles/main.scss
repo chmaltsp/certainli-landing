@@ -1,0 +1,132 @@
+@lost gutter 5px;
+@lost flexbox flex;
+// bower:scss
+// endbower
+
+@import "bower_components/normalize-scss/sass/_normalize.scss";
+@import "utilities";
+@import "grid";
+@import "buttons";
+@import "form";
+
+@include normalize();
+body {
+  background: #fafafa;
+  font-family: 'jaf-facitweb', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: 16px;
+}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 1.3px;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+.nav {
+  position: fixed;
+  z-index: 100;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  color: #FFF;
+  font-weight: 200;
+  lost-utility: clearfix;
+  @media(max-width: 700px) {
+    margin-top: 0;
+    .col-1-2 {
+      margin-top: 0;
+    }
+  }
+  .logo {
+    letter-spacing: 3px;
+  }
+
+}
+
+.bg-container {
+  display: flex;
+  background-image: url(https://unsplash.it/1024/768?random);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 700px;
+  justify-content: center;
+  z-index: 1;
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.67));
+    opacity: .3;
+    height: 700px;
+    ;
+  }
+  div {
+    align-self: center;
+    z-index: 100;
+    h1 {
+      color: #FFF;
+    }
+  }
+
+}
+
+ul > li {
+  list-style: none;
+}
+
+.heading-deco {
+  &:before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 25px;
+    height: 6px;
+    top: -10px;
+    background: #999;
+  }
+}
+
+.bg-video {
+  position: relative;
+  min-height: 700px;
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.67));
+    opacity: .6;
+    min-height: 700px;
+  }
+  .col-1-2 {
+    position: relative;
+    color: #FFF;
+    z-index: 9999;
+  }
+  video {
+    margin-top: -30rem;
+    position: absolute;;
+    min-width: 100%;
+    min-height: 100%;
+    bottom: 50%;
+    right: 50%;
+    width: auto;
+    height: auto;
+    transform: translate(50%, 50%);
+  }
+}

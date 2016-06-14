@@ -1,0 +1,29 @@
+$columns: 5;
+
+@mixin cols {
+  @for $i from 1 through $columns - 1 {
+    @for $j from 1 through $i {
+      .col-#{$j}-#{$i} {
+        lost-column: #{$j}/#{$i} 0 flex;
+        @media(max-width: 700px) {
+          lost-column: 1/1 0 flex;
+          &:last-of-type {
+            margin-top: 3rem;
+          }
+        }
+      }
+      .col-offset-#{$j}-#{$i} {
+        lost-move: #{$j}/#{$i} row;
+      }
+    }
+  }
+}
+
+.container {
+  lost-center: 960px;
+}
+
+.full-width {
+  lost-center: 100%;
+}
+@include cols;
